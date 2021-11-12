@@ -1,1 +1,3 @@
 # ZCU216-PYNQ
+
+Board repo for ZCU216 RFSOC
