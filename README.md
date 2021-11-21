@@ -2,14 +2,21 @@
 
 Board repo for ZCU216 RFSOC. Contains
 
-* ZCU216 board folder with updated device tree. Place this board folder inside your PYNQ repo in the `boards` folder.
-* tics folder with files that program the LMK/LMX PLLs for the ZCU216 RFDCs. Before you build the ZCU216 image file, place these files inside your PYNQ repo in the `sdbuild/packages/xrfclk/package/xrfclk` folder, along with the other files that were already there.
+* ZCU216 board folder with updated device tree. 
+* tics folder with files that program the LMK/LMX PLLs for the ZCU216 RFDCs. 
 
 How to make image. 
 
 Method #1: Run the `build_ZCU216.sh` script after changing the path names for the BSP and rootfs files as indicated within the script. This method automatically places the correct tics files into the correct folder as indicated above. It should take about 4 hours to build the board.
 
-Method #2: From the PYNQ repo in the `sdbuild` folder, run:
+Method #2: 
+
+First,
+
+* Place the ZCU216 board folder inside your PYNQ repo in the `boards` folder.
+* Place the two tics text files inside your PYNQ repo in the `sdbuild/packages/xrfclk/package/xrfclk` folder, along with the other files that were already there.
+
+Then, from the PYNQ repo in the `sdbuild` folder, run:
 
 `make images PREBUILT=<Path/to/prebuilt/tarball/PYNQ2.7> BOARDS=ZCU216`
 
